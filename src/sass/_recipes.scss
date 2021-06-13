@@ -1,0 +1,73 @@
+.recipes {
+  display: grid;
+  gap: 2rem 1rem;
+  @include breakpoint-up(large) {
+    grid-template-columns: 200px 1fr;
+    gap: 1rem;
+  }
+  &__tagList {
+    display: block;
+    text-align: center;
+    @include breakpoint-up(large) {
+      display: flex;
+      flex-direction: column;
+      text-align: left;
+    }
+  }
+  &__tags {
+    display: block;
+    @include breakpoint-up(large) {
+      display: flex;
+      flex-direction: column;
+    }
+    @include breakpoint-down(medium) {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+  }
+  &__singleTag {
+    color: $grey-800;
+    padding: 5px;
+    font-size: 1.1rem;
+  }
+  &__list {
+    display: grid;
+    gap: 3rem 1rem;
+    padding-bottom: 3rem;
+    margin: 0 auto;
+    align-items: center;
+    @include breakpoint-up(medium) {
+      grid-template-columns: 1fr 1fr;
+    }
+    @include breakpoint-up(large) {
+      grid-template-columns: 1fr 1fr 1fr;
+      margin-right: 1rem;
+    }
+  }
+  &__recipe {
+    display: block;
+    @include breakpoint-down(small) {
+      max-width: 300px;
+    }
+    h5 {
+      margin-bottom: 0;
+      margin-top: 0.25rem;
+      line-height: 1;
+      color: $primary-1100;
+      font-weight: 600;
+    }
+    p {
+      margin-bottom: 0;
+      line-height: 1;
+      color: $grey-800;
+      margin-top: 0.5rem;
+    }
+  }
+  &__img {
+    height: 15rem;
+    border-radius: $borderRadius;
+    @include breakpoint-down(medium) {
+      height: 10rem;
+    }
+  }
+}

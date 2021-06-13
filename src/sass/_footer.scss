@@ -1,0 +1,28 @@
+footer {
+  text-align: center;
+  height: 4rem;
+  display: flex;
+  align-items: center;
+  background-color: $black;
+  color: $white;
+  justify-content: center;
+
+  @include breakpoint-up(large) {
+    font-size: 1.6rem;
+  }
+
+  p {
+    margin-bottom: 0;
+    @include breakpoint-up(medium) {
+      margin-bottom: 1.3rem;
+    }
+    @include breakpoint-up(large) {
+      font-size: 1.6rem;
+      margin-bottom: 0;
+    }
+  }
+  span,
+  a {
+    color: $primary-500;
+  }
+}

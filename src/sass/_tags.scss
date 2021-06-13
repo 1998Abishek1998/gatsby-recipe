@@ -1,0 +1,36 @@
+.tags {
+  height: calc(100vh - (6rem + 4rem));
+  background-color: $primary-1100;
+  align-items: center;
+  &__container {
+    margin: 0 auto;
+    background: transparent;
+    max-width: 1200px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-content: space-between;
+    align-items: center;
+    @include breakpoint-down(small) {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+  &__item {
+    color: $black;
+    text-align: center;
+    height: 5rem;
+    font-size: 1.3rem;
+    width: 12rem;
+    margin: 1.5rem;
+    padding-top: 1rem;
+    border-radius: $borderRadius;
+    background-color: $grey-600;
+    transition: $transition;
+    &:hover {
+      background-color: $grey-900;
+      color: $primary-100;
+    }
+    @include breakpoint-down(small) {
+      width: 9rem;
+    }
+  }
+}
