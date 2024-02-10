@@ -29,6 +29,7 @@ export const AllRecipes = () => {
     allContentfulRecipe: { nodes: recipes },
   } = useStaticQuery(query)
 
+  console.log(recipes)
   return (
     <section className="recipes">
       <TagsList recipes={recipes} />

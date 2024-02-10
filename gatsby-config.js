@@ -5,7 +5,7 @@
  */
 
 require("dotenv").config({
-  path: `.env.${process.env.NODE_ENV}`,
+  path: `.env`,
 })
 
 module.exports = {
@@ -37,8 +37,8 @@ module.exports = {
     {
       resolve: `gatsby-source-contentful`,
       options: {
-        spaceId: `oa29d1hayzth`,
-        accessToken: process.env.CONTENTFUL_API_KEY,
+        spaceId: process.env.CONTENTFUL_SPACE_ID,
+        accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
       },
     },
   ],
